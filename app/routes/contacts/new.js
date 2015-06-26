@@ -7,10 +7,18 @@ export default Ember.Route.extend({
   // "deactivate" event fires when you leave a route
   cleanUp: Ember.on('deactivate', function(){
     // currentModel is the model from the current route
-    this.get('currentModel').destroyRecord();
+    const contact = this.get('currentModel');
+    if(!contact.get('isSaving') && contact.get('isNew')){
+      currentModel.destroyRecord();
+    }
   }),
   actions: {
     cancel: function(){
+      this.transitionTo('contacts');
+    },
+    submit: function(){
+      const contact = this.get('currentModel');
+      contact.save();
       this.transitionTo('contacts');
     },
   },
