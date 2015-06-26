@@ -1,0 +1,17 @@
+<h1>Create a Contact</h1>
+
+<form>
+  <label>First Name</label>
+  {{input value=model.nameFirst}}
+
+  <label>Last Name</label>
+  {{input value=model.nameLast}}
+
+  <label>Twitter</label>
+  {{input value=model.twitter}}
+
+  <input type="submit" value="Submit">
+  <button {{action 'cancel'}}>Cancel</button>
+</form>
+
+{{outlet}}
