@@ -3,7 +3,9 @@
 <ul>
   {{#each filteredContacts as |contact|}}
     <li>
-      {{contact.fullName}}
+      {{#link-to 'contacts.contact' contact}}
+        {{contact.fullName}}
+      {{/link-to}}
     </li>
   {{/each}}
 </ul>
