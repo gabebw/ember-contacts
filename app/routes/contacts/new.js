@@ -9,7 +9,7 @@ export default Ember.Route.extend({
     // currentModel is the model from the current route
     const contact = this.get('currentModel');
     if(!contact.get('isSaving') && contact.get('isNew')){
-      currentModel.destroyRecord();
+      contact.destroyRecord();
     }
   }),
   actions: {
