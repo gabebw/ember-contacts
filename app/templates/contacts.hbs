@@ -1,5 +1,8 @@
-<h2>Your contacts</h2>
+<div class="contact-list">
+  <h2>Your contacts</h2>
+  {{contact-list contacts=model}}
+</div>
 
-{{contact-list contacts=model}}
-
-{{outlet}}
+<div class="contact">
+  {{outlet}}
+</div>

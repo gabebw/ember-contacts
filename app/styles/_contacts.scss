@@ -1,0 +1,4 @@
+.contact-list {
+  @include span-columns(3);
+  @include pad();
+}
