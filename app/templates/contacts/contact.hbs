@@ -11,6 +11,10 @@
   <dd>{{model.twitter}}</dd>
 </dl>
 
+{{#link-to 'contacts.edit' model tagName="button"}}
+  Edit
+{{/link-to}}
+
 <button {{action 'destroy'}}>
   Delete this contact
 </button>
