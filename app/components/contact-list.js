@@ -12,11 +12,11 @@ export default Ember.Component.extend({
     function(){
       const query = this.get('query');
       const contacts = this.get('contacts');
-      // turn the query into a case-insensitive query
-      const caseInsensitiveQuery = new RegExp(query, "i");
+      const fuzzyQuery = query.split('').join(".*");
+      const caseInsensitiveFuzzyQuery = new RegExp(fuzzyQuery, "i");
 
       return contacts.filter(function(contact){
-        return contact.get('fullName').match(caseInsensitiveQuery);
+        return contact.get('fullName').match(caseInsensitiveFuzzyQuery);
       });
     }
   ),
