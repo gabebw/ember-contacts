@@ -1,4 +1,10 @@
 .contact-list {
   @include span-columns(3);
   @include pad();
+
+  // Ember's link-to helper automatically adds the `active` class to the current
+  // link
+  a.active {
+    color: red;
+  }
 }
