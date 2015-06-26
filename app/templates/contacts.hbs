@@ -1,9 +1,5 @@
 <h2>Your contacts</h2>
 
-{{#each model as |contact|}}
-  <p>
-    {{contact.fullName}}
-  </p>
-{{/each}}
+{{contact-list contacts=model}}
 
 {{outlet}}

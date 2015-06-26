@@ -1,1 +1,7 @@
-{{yield}}
+<ul>
+  {{#each contacts as |contact|}}
+    <li>
+      {{contact.fullName}}
+    </li>
+  {{/each}}
+</ul>
